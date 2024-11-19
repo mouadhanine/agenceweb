@@ -81,7 +81,9 @@ transition: all 0.7s ease;
     grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); /* Responsive grid */
     gap: 20px; /* Space between cards */
     padding: 90px 80Px 75px; /* Space around the container */
-    
+    max-width: 1400PX;
+    margin: auto;
+
   }
 .card:hover .card-title {
     color: white; /* Change la couleur du texte en blanc lors du survol */
@@ -210,6 +212,8 @@ transition: all 0.7s ease;
   grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); /* Grille responsive */
   gap: 20px; /* Espacement entre les cartes */
   padding: 20px; /* Espacement autour du conteneur */
+  max-width: 1400PX;
+  margin: auto;
 }
 
 /* Carte individuelle */
