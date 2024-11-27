@@ -23,13 +23,12 @@
     padding: 10px; /* Espacement autour du texte */
     border-radius: 5px; /* Coins arrondis */
 }
-#idsection-contenu{
-    max-width: 1000px;
-}
+
 .zone-principale{
-    box-shadow: none;
-    background-color: rgb(255, 248, 52);
-}
-#contenu2{
+    background-color: transparent;
     height: fit-content;
+    box-shadow: none;
+}
+#h2annulpad{
+    padding-top: 0;
 }

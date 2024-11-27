@@ -160,7 +160,7 @@ transition: all 0.7s ease;
   text-align: center; /* Centre le texte */
   padding: 20px;
   margin: 0 auto;
-  max-width: 800px; /* Limite la largeur pour un affichage optimal */
+  max-width: 1400px; /* Limite la largeur pour un affichage optimal */
 }
 
 /* Titre principal */
