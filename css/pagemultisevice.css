@@ -1,0 +1,35 @@
+.photo-wrapper {
+    position: relative; /* Positionnement relatif pour le conteneur */
+    width: 100%;
+    height: 300PX;
+}
+
+.photo {
+    width: 100%;
+    height: 100%;
+    filter: brightness(0.5); /* Filtre sombre */
+    object-fit: cover;  /* Pour maintenir le ratio d'aspect */
+}
+
+.overlay-text {
+    position: absolute; /* Positionnement absolu pour le texte */
+    top: 50%; /* Positionne le texte au centre verticalement */
+    left: 50%; /* Positionne le texte au centre horizontalement */
+    transform: translate(-50%, -50%); /* Centre le texte */
+    color: white; /* Couleur du texte */
+    font-size: 20px; /* Taille de la police */
+    text-align: center; /* Centre le texte */
+    background-color: rgba(0, 0, 0, 0.5); /* Fond semi-transparent pour le texte */
+    padding: 10px; /* Espacement autour du texte */
+    border-radius: 5px; /* Coins arrondis */
+}
+#idsection-contenu{
+    max-width: 1000px;
+}
+.zone-principale{
+    box-shadow: none;
+    background-color: rgb(255, 248, 52);
+}
+#contenu2{
+    height: fit-content;
+}

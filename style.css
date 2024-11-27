@@ -88,7 +88,7 @@ transition: all 0.7s ease;
 .card:hover .card-title {
     color: white; /* Change la couleur du texte en blanc lors du survol */
 }.card:hover {
-    background: linear-gradient(to right, #9105e9, #F63B95); /* Dégradé lors du survol */
+    background: linear-gradient(to right, #9105e9, #F63B95); /* Dégradé lors du survol */cursor: pointer;
 }
   /* Individual card */
   .card {
@@ -338,8 +338,7 @@ transition: all 0.7s ease;
 .zone-principale {
   width: 94%;
   border-radius: 6px;
-
-  margin: 0 auto;
+  margin: 100px auto;
   text-align: center;
   background-color: #efefefe1;
   max-width: 1400px;
@@ -413,7 +412,7 @@ transition: all 0.7s ease;
   box-sizing: border-box;
   height: 100%;
   width: 100%;
-padding: 0 5%;
+  padding: 0 5%;
 }
 .grid-container {
   display: grid;
@@ -434,7 +433,7 @@ padding: 0 5%;
 .box img {
   width: 100%; /* Les images remplissent la largeur de leur conteneur */
   height: 100%; /* Les images remplissent la hauteur de leur conteneur */
-  object-fit: fill; /* Assure que l'image remplit la box sans déformer */
+  object-fit: cover; /* Assure que l'image remplit la box sans déformer */
   display: block; /* Évite les espaces sous l'image */
   transition:transform 0.5s, filter 0.9s;
   
@@ -514,23 +513,22 @@ padding: 0 5%;
     display: grid;
     grid-template-columns: 2fr 1fr; /* 2 colonnes : grid-container (2/3) et divoneimage (1/3) */
     grid-template-rows: 1fr; /* Ajuste automatiquement les lignes */
-    gap: 10px; /* Espacement entre les colonnes */
-    height: 100%;;
-
+    gap: 8px; /* Réduction de l'espacement entre les colonnes */
+    width: 96%; /* Réduire la largeur globale */
+    margin: 20px auto; /* Ajuster les marges */
   }
 
   .grid-container {
     display: grid;
-    height: 100%;
     grid-template-columns: repeat(2, 1fr); /* 2 colonnes pour les images */
-    grid-template-rows: 1fr 1fr 1fr; /* 3 lignes égales */ /* 3 lignes pour organiser les images */
-    gap: 10px; /* Espacement uniforme entre les éléments */
-    height: 100%;
+    grid-template-rows: 1fr 1fr 1fr; /* 3 lignes égales */
+    gap: 8px; /* Réduire l'espacement entre les éléments */
+    height: auto; /* Ajuster la hauteur automatiquement */
   }
 
   /* Organisation des images */
   .image2 {
-    grid-column: span 2; /* Occupe les 2 colonnes en haut */
+    grid-column: span 2; /* Occupe toujours 2 colonnes, mais on réduit l'espacement */
     grid-row: 1; /* Première ligne */
   }
 
@@ -555,17 +553,17 @@ padding: 0 5%;
   }
 
   .divoneimage {
-    grid-column: 2; /* Deuxième colonne de divmerebox */
-    height: 100%; /* Ajuste automatiquement la hauteur */
-    
+    grid-column: span 1; /* Réduire la largeur de la divoneimage pour réduire la taille */
+    height: auto; /* Ajuster la hauteur en fonction de l'image */
   }
 
   .divoneimage img {
     width: 100%;
     height: 100%;
-    object-fit: fill; /* Assure un bon ajustement de l'image */
+    object-fit: cover; /* Assurer que l'image couvre bien */
   }
 }
+
 
 @media (max-width: 1200px) {
   .divmerebox {
@@ -712,8 +710,189 @@ padding: 0 5%;
       opacity: 1; /* Affiche le titre au survol */
   }
 }
-.divana{
-width: 100%;
-background-color: yellow;
-height: 200PX;
+
+
+footer {
+  background-color: #222;
+  color: #fff;
+  padding: 20px 50px;
+  background: linear-gradient(to right, #9105e9,#9105e9, #F63B95);
+  animation: gradientAnimation 3s infinite alternate; /* Animation fluide */
+  background-size: 200% 200%; /* Étire le gradient */
+}
+.footer-logo {
+  text-align: center;
+  margin-bottom: 15px;
+}
+
+.footer-logo img {
+  max-width: 150px; /* Ajustez la taille du logo si nécessaire */
+  height: auto;
+}
+
+.footer-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  gap: 20px;
+  max-width: 1400px;
+  margin: auto;
+}
+@keyframes gradientAnimation {
+  0% {
+    background-position: 0% 50%;
+  }
+  100% {
+    background-position: 100% 50%;
+  }
+}
+
+.footer-section {
+  flex: 1 1 calc(33.333% - 20px); /* Ajuste la largeur pour 3 colonnes */
+  min-width: 250px;
+  
+}
+
+.footer-section h3 {
+  margin-bottom: 10px;
+  color: #ffcc00;
+  font-size: 1.3rem;
+}
+
+.footer-section ul {
+  list-style-type: none;
+  padding: 0;
+}
+
+.footer-section ul li {
+  margin-bottom: 5px;
+}
+
+.footer-section ul li a {
+  color: #fff;
+  text-decoration: none;
+}
+
+.footer-section ul li a:hover {
+  text-decoration: underline;
+  color: #ffcc00;
+}
+.footer-bottom {
+display: flex;
+justify-content:space-between;
+align-items: center;
+}
+.footer-section p {
+  margin-top: 10px;
+  font-size: 14px;
+  line-height: 1.5;
+}
+.footer-separator {
+  width: 100%;
+  height: 3px;
+  background: #ffcc00; /* Couleur de la barre */
+  margin: 20px 0; /* Espacement autour de la barre */
+}
+.footer-bottom .social-icons {
+  margin-top: 10px;
+}
+
+.footer-bottom .social-icons a {
+  margin: 0 10px;
+  display: inline-block;
+  text-decoration: none;
+}
+
+.footer-bottom .social-icons img {
+  width: 24px;
+  height: 24px;
+  filter: invert(1); /* Rendre les icônes blanches */
+}
+.social-icons a {
+  color: #fff;
+  font-size: 20px;
+  margin: 0 10px;
+  transition: color 0.3s ease;
+}
+
+.social-icons a:hover {
+  color: #ffcc00; /* Couleur au survol */
+}
+
+
+@media (max-width: 768px) {
+  .footer-container {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .footer-section {
+    flex: 1 1 100%;
+    text-align: center;
+  }
+}
+@media (max-width: 650px) {
+  .footer-bottom {
+   flex-direction: column;
+  }
+}
+.containerbtn{
+  width: 80%; /* Largeur du conteneur */
+  max-width: 600px; /* Largeur maximale */
+  margin-top: 30px;
+}
+.link-button {
+  display: inline-block; /* Permet d'appliquer du padding */
+  width: 65%; /* Prend toute la largeur du conteneur */
+  padding: 15px; /* Padding pour le lien */
+  font-size: 20px; /* Taille de la police */
+  font-family:"Montserrat", sans-serif;
+  color: #000000; /* Couleur du texte */
+  background-color: #ffcc00;
+  font-weight: 600;
+  text-align: center; /* Centrer le texte */
+  text-decoration: none; /* Pas de soulignement */
+  border: 2px solid transparent; /* Bordure invisible par défaut */
+  border-radius: 5px; /* Coins arrondis */
+  transition: background-color 0.3s, color 0.3s; /* Transition pour l'effet de survol */
+}
+
+.link-button:hover {
+  background-color: #ffae00; /* Couleur de fond au survol */
+  color: white; /* Couleur du texte au survol */
+}
+.banner {
+  width: 100%; /* Largeur 100% */
+  background-color: #007BFF; /* Couleur de fond */
+  display: flex;
+  justify-content: center; /* Centre le contenu horizontalement */
+  align-items: center; /* Centre le contenu verticalement */
+  padding: 20px 0; /* Padding vertical */
+}
+
+.content {
+  width: 70%; /* Largeur de la div interne */
+  text-align: center; /* Centre le texte */
+  color: white; /* Couleur du texte */
+  
+}
+#btnbanner{
+  width: 45%;
+}
+@media (max-width: 768px) {
+  .content {
+      width: 90%; /* Largeur de la div interne sur les petits écrans */
+  }
+  #btnbanner{ width: 60%;}
+  h1 {
+      font-size: 20px; /* Taille de la police réduite sur les petits écrans */
+  }
+
+  .link-button {
+      font-size: 14px; /* Taille de la police réduite pour le bouton sur les petits écrans */
+  }
+}
+
+#h1banner{
+  margin-bottom: 20px;
 }

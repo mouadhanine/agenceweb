@@ -141,11 +141,13 @@ nav.container {
     transition: top .4s, opacity .3s;
     max-height: max-content;
   }
+
+
   .nav__menu::-webkit-scrollbar {
     width: 0;
   }
   .nav__list {
-    background-color: rgb(54, 0, 90);
+    background: linear-gradient(to right,#9105e9,#F63B95,#9105e9, #9105e9,#F63B95,#9105e9);
     padding-top: 1rem;
   }
 }
@@ -195,7 +197,7 @@ nav.container {
 
 .dropdown__link, 
 .dropdown__sublink {
-  padding: 1.25rem 1.25rem 1.25rem 2.5rem;
+  padding: 1.25rem 1.25rem 1.25rem 1.5rem;
   color: var(--white-color);
   background-color: var(--black-color-light);
   display: flex;
@@ -203,8 +205,10 @@ nav.container {
   column-gap: .5rem;
   font-weight: var(--font-semi-bold);
   transition: background-color .3s;
-  height: 3.5rem;
+  height: 2.6rem;
   background-color: #4285f4;
+  font-size: 0.9rem;
+  white-space: nowrap;
 }
 .dropdown__link i, 
 .dropdown__sublink i {
@@ -214,7 +218,7 @@ nav.container {
 
 .dropdown__link:hover, 
 .dropdown__sublink:hover {
-  background-color: red;
+  background-color: rgb(0, 11, 164);
 }
 
 .dropdown__menu, 
@@ -222,7 +226,9 @@ nav.container {
   max-height: 0;
   overflow: hidden;
   transition: max-height .4s ease-out;
+  
 }
+
 
 /* Show dropdown menu & submenu */
 .dropdown__item:hover .dropdown__menu, 
@@ -263,6 +269,7 @@ nav.container {
   nav.container {
     margin-inline: auto;
   }
+  
 
   .nav {
     height: calc(var(--header-height) + 2rem);
@@ -307,7 +314,7 @@ nav.container {
 
   .dropdown__link, 
   .dropdown__sublink {
-    padding-inline: 1rem 3.5rem;
+    padding-inline: 1rem 1rem;
   }
 
   .dropdown__subitem .dropdown__link {
@@ -357,13 +364,12 @@ nav.container {
   max-height: 0; /* Menu caché par défaut */
   overflow: hidden; /* Pas de défilement quand le menu est caché */
   opacity: 0;
-  pointer-events: none; /* Désactive les événements de survol ou de clic */
   transition: max-height 0.4s ease, opacity 0.3s ease;
 }
 
 /* Au survol du parent */
 .dropdown__item:hover .dropdown__menu {
-  max-height: 400px; /* Hauteur maximale définie pour le défilement */
+  max-height: none; /* Hauteur maximale définie pour le défilement */
   overflow-y: auto; /* Permet le défilement vertical */
   opacity: 1;
   transition: max-height 0.4s ease, opacity 0.3s ease;
